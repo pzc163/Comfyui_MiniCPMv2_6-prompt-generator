@@ -9,21 +9,21 @@ Above model fine-tuning based on int4 quantized version of [MiniCPM-V 2.6](https
 
 - **Single-Image Caption**: Users can submit single image to generating caption. upload a image and set the **caption_method** to  "caption", the resulting in a caption such as below:
 
-  ![single image caption](assets/single image caption.jpg)
+  ![single image caption](assets/single_image_caption.jpg)
 
   
 
 - **Short prompt generate:** Users can upload a image to generating short prompt. To upload a image and set the **caption_method** to  "short_prompt ", the resulting in text output as prompt like below:
 
-  ![short_prompt](assets/short prompt.png)
+  ![short_prompt](assets/short_prompt.png)
 
 - **Long prompt generate:** Users can upload a image to generating long prompt. To upload a image and set the **caption_method** to  "long_prompt ", the resulting in text output as prompt like below:
 
-  ![long_prompt](assets/long prompt.png)
+  ![long_prompt](assets/long_prompt.png)
 
 - Image regenerate: Users can pass the generated prompt to CLIP node as text input to regenerate image through t2i model by you like. sample workflow as below:
 
-  ![Image regenerate](assets/prompt to regenerate image.png)
+  ![Image regenerate](assets/prompt_to_regenerate_image.png)
 
 
 
@@ -31,7 +31,7 @@ Above model fine-tuning based on int4 quantized version of [MiniCPM-V 2.6](https
 
  For batch images caption, User can indicate the image folder path, system will read all images in the folder and put generated caption of the image as text file by the same as image's file name, the example workflow under the workflow folder as below:
 
-![Batch image caption](assets/batch captions.png)
+![Batch image caption](assets/batch_captions.png)
 
 
 
