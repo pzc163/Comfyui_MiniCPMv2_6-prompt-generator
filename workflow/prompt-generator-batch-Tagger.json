@@ -1,0 +1,393 @@
+{
+  "last_node_id": 60,
+  "last_link_id": 118,
+  "nodes": [
+    {
+      "id": 50,
+      "type": "Note",
+      "pos": [
+        -4444,
+        -1140
+      ],
+      "size": {
+        "0": 383.7942199707031,
+        "1": 145.9785919189453
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "# MiniCPMv2.6-prompt-generator\n\n* This workflow is meant for people who want to concatenate image description with tags"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 53,
+      "type": "easy showAnything",
+      "pos": [
+        -3368,
+        -463
+      ],
+      "size": {
+        "0": 210,
+        "1": 76
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 98,
+          "label": "输入任何"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "8"
+      ]
+    },
+    {
+      "id": 58,
+      "type": "Prompt_Generator",
+      "pos": [
+        -3902,
+        -1129
+      ],
+      "size": {
+        "0": 413.7353820800781,
+        "1": 419.09832763671875
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null,
+          "label": "images"
+        },
+        {
+          "name": "filenames",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "filenames"
+          },
+          "label": "filenames"
+        },
+        {
+          "name": "captions",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "captions"
+          },
+          "label": "captions"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0,
+          "shape": 6,
+          "label": "images"
+        },
+        {
+          "name": "filenames",
+          "type": "STRING",
+          "links": [
+            115
+          ],
+          "slot_index": 1,
+          "shape": 6,
+          "label": "filenames"
+        },
+        {
+          "name": "captions",
+          "type": "STRING",
+          "links": [
+            97,
+            116
+          ],
+          "slot_index": 2,
+          "shape": 6,
+          "label": "captions"
+        },
+        {
+          "name": "folder_path",
+          "type": "STRING",
+          "links": [
+            117
+          ],
+          "slot_index": 3,
+          "shape": 3,
+          "label": "folder_path"
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "links": [
+            98
+          ],
+          "slot_index": 4,
+          "shape": 3,
+          "label": "batch_size"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Prompt_Generator"
+      },
+      "widgets_values": [
+        "E:\\download file\\Likeran test",
+        "long_prompt",
+        2048,
+        3,
+        "",
+        "",
+        "",
+        "",
+        "replace_tags eg:search1:replace1;search2:replace2"
+      ]
+    },
+    {
+      "id": 59,
+      "type": "Save_Prompts",
+      "pos": [
+        -3357,
+        -1191
+      ],
+      "size": {
+        "0": 315,
+        "1": 154
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "filenames",
+          "type": "STRING",
+          "link": 115,
+          "widget": {
+            "name": "filenames"
+          },
+          "label": "filenames"
+        },
+        {
+          "name": "captions",
+          "type": "STRING",
+          "link": 116,
+          "widget": {
+            "name": "captions"
+          },
+          "label": "captions"
+        },
+        {
+          "name": "save_folder",
+          "type": "STRING",
+          "link": 117,
+          "widget": {
+            "name": "save_folder"
+          },
+          "label": "save_folder"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "captions",
+          "type": "STRING",
+          "links": [
+            118
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "captions"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Save_Prompts"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "Your save directory",
+        "",
+        "overwrite"
+      ]
+    },
+    {
+      "id": 46,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -3371,
+        -969
+      ],
+      "size": {
+        "0": 358.5955505371094,
+        "1": 426
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 97,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "In the heart of a serene landscape, a majestic waterfall cascades down a rocky cliff, surrounded by vibrant red trees that stand in stark contrast to the lush greenery. Nestled at the base of the waterfall is a quaint village, with traditional houses and a small bridge crossing over a tranquil river. The sky above is painted with soft hues of pink and purple, casting a warm glow over the entire scene. This harmonious blend of natural beauty and human habitation invites the viewer to lose themselves in the peaceful ambiance of this idyllic setting.",
+        "In the heart of a serene landscape, majestic mountains cloaked in vibrant red hues rise against a misty sky. Nestled at the foot of these towering peaks, a quaint village thrives, its traditional architecture harmonizing with the natural surroundings. The river, a lifeline of the community, meanders through the scene, its waters reflecting the fiery colors of the foliage. As the sun sets, casting a warm glow over the entire scene, the villagers gather by the riverside, their laughter echoing through the valley. This tranquil tableau is a testament to the timeless beauty of nature and the enduring spirit of a close-knit community.",
+        "In the heart of a serene landscape, a majestic waterfall cascades down a rocky cliff, its white froth contrasting with the deep red hues of the surrounding foliage. Nestled at the base of the cliff, a quaint village with traditional architecture thrives, its inhabitants going about their daily lives. The sky above is a canvas of muted tones, adding a sense of tranquility to the scene. This harmonious blend of natural beauty and human habitation invites the viewer to lose themselves in the peaceful ambiance of this idyllic setting.",
+        "A serene autumnal landscape, where vibrant red leaves contrast against the muted tones of the forest. A gentle stream flows through the scene, with a quaint stone bridge crossing over it. In the distance, two figures stand by the water's edge, their silhouettes adding a sense of scale and human presence to the tranquil setting.",
+        "In the heart of a vibrant autumn landscape, a quaint village nestles amidst a sea of fiery red trees. The houses, painted in stark black and white, stand out against the warm hues of the foliage. Two children, one in a blue jacket and the other in red, wander through the village, their laughter echoing through the crisp air. In the foreground, a small stream meanders, its waters reflecting the brilliant colors of the surrounding trees. The scene is a harmonious blend of nature and human habitation, capturing the essence of a peaceful autumn day.",
+        "In the heart of a mystical forest, a towering mountain blanketed in vibrant red foliage stands majestically. The mountain's rugged surface, adorned with intricate patterns, is a testament to the passage of time. The sky above is a canvas of soft, pastel hues, providing a serene backdrop to the scene. In the distance, the faint outlines of other mountains can be seen, adding depth and a sense of vastness to the landscape. The overall composition of the image evokes a sense of tranquility and awe, as if inviting the viewer to lose themselves in the beauty of nature.",
+        "In the heart of a mystical forest, a majestic waterfall cascades down a cliff, its white froth contrasting with the deep red hues of the surrounding foliage. The trees, ablaze with the vibrant colors of autumn, stand tall and proud, their branches reaching out as if to embrace the falling water. The scene is bathed in a soft, ethereal light, highlighting the intricate details of the landscape and creating a sense of tranquility and awe. This painting captures the essence of nature's beauty, inviting the viewer to lose themselves in the serene splendor of the forest and the powerful force of the waterfall.",
+        "Creating a Midjourney-style long prompt for generating high-quality images involves crafting a vivid and detailed description that captures the essence of the scene. Here's a prompt that encapsulates the rich details and composition of the provided image:\n\n\"An evocative piece of traditional Chinese ink and wash painting, this artwork depicts a serene mountain landscape. The mountains, rendered in bold black ink, rise majestically from the canvas, their peaks adorned with delicate red splashes that suggest blossoming flowers. The background is a soft gradient of pale pink, providing a gentle contrast to the stark black and red of the mountains. In the foreground, calligraphy in elegant, flowing brushstrokes adds a poetic dimension to the scene, conveying a sense of tranquility and harmony with nature. The overall composition is balanced, with the mountains occupying the lower half of the canvas and the calligraphy gracefully filling the upper space, creating a harmonious blend of natural beauty and literary artistry.\""
+      ]
+    },
+    {
+      "id": 55,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -2846,
+        -1178
+      ],
+      "size": {
+        "0": 548.1318969726562,
+        "1": 497.8062438964844
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 118,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "In the heart of a serene landscape, a majestic waterfall cascades down a rocky cliff, surrounded by vibrant red trees that stand in stark contrast to the lush greenery. Nestled at the base of the waterfall is a quaint village, with traditional houses and a small bridge crossing over a tranquil river. The sky above is painted with soft hues of pink and purple, casting a warm glow over the entire scene. This harmonious blend of natural beauty and human habitation invites the viewer to lose themselves in the peaceful ambiance of this idyllic setting.",
+        "In the heart of a serene landscape, majestic mountains cloaked in vibrant red hues rise against a misty sky. Nestled at the foot of these towering peaks, a quaint village thrives, its traditional architecture harmonizing with the natural surroundings. The river, a lifeline of the community, meanders through the scene, its waters reflecting the fiery colors of the foliage. As the sun sets, casting a warm glow over the entire scene, the villagers gather by the riverside, their laughter echoing through the valley. This tranquil tableau is a testament to the timeless beauty of nature and the enduring spirit of a close-knit community.",
+        "In the heart of a serene landscape, a majestic waterfall cascades down a rocky cliff, its white froth contrasting with the deep red hues of the surrounding foliage. Nestled at the base of the cliff, a quaint village with traditional architecture thrives, its inhabitants going about their daily lives. The sky above is a canvas of muted tones, adding a sense of tranquility to the scene. This harmonious blend of natural beauty and human habitation invites the viewer to lose themselves in the peaceful ambiance of this idyllic setting.",
+        "A serene autumnal landscape, where vibrant red leaves contrast against the muted tones of the forest. A gentle stream flows through the scene, with a quaint stone bridge crossing over it. In the distance, two figures stand by the water's edge, their silhouettes adding a sense of scale and human presence to the tranquil setting.",
+        "In the heart of a vibrant autumn landscape, a quaint village nestles amidst a sea of fiery red trees. The houses, painted in stark black and white, stand out against the warm hues of the foliage. Two children, one in a blue jacket and the other in red, wander through the village, their laughter echoing through the crisp air. In the foreground, a small stream meanders, its waters reflecting the brilliant colors of the surrounding trees. The scene is a harmonious blend of nature and human habitation, capturing the essence of a peaceful autumn day.",
+        "In the heart of a mystical forest, a towering mountain blanketed in vibrant red foliage stands majestically. The mountain's rugged surface, adorned with intricate patterns, is a testament to the passage of time. The sky above is a canvas of soft, pastel hues, providing a serene backdrop to the scene. In the distance, the faint outlines of other mountains can be seen, adding depth and a sense of vastness to the landscape. The overall composition of the image evokes a sense of tranquility and awe, as if inviting the viewer to lose themselves in the beauty of nature.",
+        "In the heart of a mystical forest, a majestic waterfall cascades down a cliff, its white froth contrasting with the deep red hues of the surrounding foliage. The trees, ablaze with the vibrant colors of autumn, stand tall and proud, their branches reaching out as if to embrace the falling water. The scene is bathed in a soft, ethereal light, highlighting the intricate details of the landscape and creating a sense of tranquility and awe. This painting captures the essence of nature's beauty, inviting the viewer to lose themselves in the serene splendor of the forest and the powerful force of the waterfall.",
+        "Creating a Midjourney-style long prompt for generating high-quality images involves crafting a vivid and detailed description that captures the essence of the scene. Here's a prompt that encapsulates the rich details and composition of the provided image:\n\n\"An evocative piece of traditional Chinese ink and wash painting, this artwork depicts a serene mountain landscape. The mountains, rendered in bold black ink, rise majestically from the canvas, their peaks adorned with delicate red splashes that suggest blossoming flowers. The background is a soft gradient of pale pink, providing a gentle contrast to the stark black and red of the mountains. In the foreground, calligraphy in elegant, flowing brushstrokes adds a poetic dimension to the scene, conveying a sense of tranquility and harmony with nature. The overall composition is balanced, with the mountains occupying the lower half of the canvas and the calligraphy gracefully filling the upper space, creating a harmonious blend of natural beauty and literary artistry.\""
+      ]
+    }
+  ],
+  "links": [
+    [
+      97,
+      58,
+      2,
+      46,
+      0,
+      "STRING"
+    ],
+    [
+      98,
+      58,
+      4,
+      53,
+      0,
+      "*"
+    ],
+    [
+      115,
+      58,
+      1,
+      59,
+      0,
+      "STRING"
+    ],
+    [
+      116,
+      58,
+      2,
+      59,
+      1,
+      "STRING"
+    ],
+    [
+      117,
+      58,
+      3,
+      59,
+      2,
+      "STRING"
+    ],
+    [
+      118,
+      59,
+      0,
+      55,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8769226950000005,
+      "offset": [
+        4784.076494609453,
+        1673.017675311999
+      ]
+    },
+    "workspace_info": {
+      "id": "ZTpTGCWEEFBXIH_sE_TnF"
+    }
+  },
+  "version": 0.4
+}
